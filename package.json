@@ -1,0 +1,44 @@
+{
+  "name": "ssa-front-end-akib",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React boilerplate with Ant Design, Less, Context, Router, and i18n",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkibMankad/SSA-Front-end-akib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AkibMankad/SSA-Front-end-akib/issues"
+  },
+  "homepage": "https://github.com/AkibMankad/SSA-Front-end-akib#readme",
+  "dependencies": {
+    "antd": "^6.3.0",
+    "i18next": "^25.8.11",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-i18next": "^16.5.4",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^5.1.4",
+    "globals": "^17.3.0",
+    "jsdom": "^28.1.0",
+    "less": "^4.5.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  }
+}
