@@ -80,3 +80,86 @@
     min-height: auto;
   }
 }
+
+// Step-specific styles
+.step-full-width {
+  width: 100%;
+}
+
+.step-help-btn {
+  padding: 0;
+  height: auto;
+  margin-left: 8px;
+}
+
+.form-label-with-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.form-label-with-action .form-label {
+  margin-bottom: 0;
+}
+
+.rtl-page .step-help-btn {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+// Form field styles
+.form-field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-label {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+  line-height: 1.5715;
+}
+
+.form-required {
+  color: #ff4d4f;
+  margin-left: 2px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.form-error {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+// Input width styles
+.form-field .ant-input,
+.form-field .ant-input-number,
+.form-field .ant-select,
+.form-field .ant-picker {
+  width: 100%;
+}
+
+.form-field textarea.ant-input {
+  width: 100%;
+}
+
+// Number input styles - full width
+.number-input-small {
+  width: 100% !important;
+}
+
+.rtl-page .form-label {
+  flex-direction: row-reverse;
+}
+
+.rtl-page .form-required {
+  margin-left: 0;
+  margin-right: 2px;
+}

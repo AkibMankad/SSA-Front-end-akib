@@ -1,15 +1,13 @@
+import { memo } from 'react';
 import PersonalInformationStep from '../steps/PersonalInformationStep';
 import FamilyFinancialStep from '../steps/FamilyFinancialStep';
 import SituationDescriptionsStep from '../steps/SituationDescriptionsStep';
 
-export default function StepContent({ currentStep }) {
-  if (currentStep === 0) {
-    return <PersonalInformationStep />;
-  }
+const STEP_COMPONENTS = [PersonalInformationStep, FamilyFinancialStep, SituationDescriptionsStep];
 
-  if (currentStep === 1) {
-    return <FamilyFinancialStep />;
-  }
-
-  return <SituationDescriptionsStep />;
+function StepContent({ currentStep }) {
+  const StepComponent = STEP_COMPONENTS[currentStep];
+  return <StepComponent currentStep={currentStep} />;
 }
+
+export default memo(StepContent);

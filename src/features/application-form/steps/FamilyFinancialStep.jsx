@@ -1,57 +1,92 @@
 import { Col, Form, InputNumber, Row, Select } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import { EMPLOYMENT_STATUS_VALUES, HOUSING_STATUS_VALUES, MARITAL_STATUS_VALUES } from '../constants';
+import { getFieldValidation, getFieldPlaceholder } from '../utils/validationRules';
 
-export default function FamilyFinancialStep() {
+function FamilyFinancialStep() {
   const { t } = useTranslation();
 
   return (
     <Row gutter={[16, 4]}>
       <Col xs={24} md={12}>
         <Form.Item
-          name="maritalStatus"
           label={t('maritalStatus')}
-          rules={[{ required: true, message: t('required') }]}
+          name="maritalStatus"
+          rules={getFieldValidation('maritalStatus', t)}
         >
-          <Select options={MARITAL_STATUS_VALUES.map((value) => ({ label: t(value), value }))} />
+          <Select
+            placeholder={getFieldPlaceholder('maritalStatus', t)}
+            options={MARITAL_STATUS_VALUES.map((value) => ({ label: t(value), value }))}
+          />
         </Form.Item>
       </Col>
       <Col xs={24} md={12}>
         <Form.Item
-          name="dependents"
           label={t('dependents')}
-          rules={[{ required: true, message: t('required') }]}
+          name="dependents"
+          rules={getFieldValidation('dependents', t)}
         >
-          <InputNumber min={0} style={{ width: '100%' }} />
+          <InputNumber
+            min={1}
+            max={50}
+            placeholder={getFieldPlaceholder('dependents', t)}
+            className="number-input-small"
+            controls={false}
+            onKeyPress={(e) => {
+              if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
+          />
         </Form.Item>
       </Col>
       <Col xs={24} md={12}>
         <Form.Item
-          name="employmentStatus"
           label={t('employmentStatus')}
-          rules={[{ required: true, message: t('required') }]}
+          name="employmentStatus"
+          rules={getFieldValidation('employmentStatus', t)}
         >
-          <Select options={EMPLOYMENT_STATUS_VALUES.map((value) => ({ label: t(value), value }))} />
+          <Select
+            placeholder={getFieldPlaceholder('employmentStatus', t)}
+            options={EMPLOYMENT_STATUS_VALUES.map((value) => ({ label: t(value), value }))}
+          />
         </Form.Item>
       </Col>
       <Col xs={24} md={12}>
         <Form.Item
-          name="monthlyIncome"
           label={t('monthlyIncome')}
-          rules={[{ required: true, message: t('required') }]}
+          name="monthlyIncome"
+          rules={getFieldValidation('monthlyIncome', t)}
         >
-          <InputNumber min={0} style={{ width: '100%' }} />
+          <InputNumber
+            min={0}
+            max={9999999}
+            placeholder={getFieldPlaceholder('monthlyIncome', t)}
+            className="number-input-small"
+            controls={false}
+            onKeyPress={(e) => {
+              if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
+          />
         </Form.Item>
       </Col>
       <Col xs={24} md={12}>
         <Form.Item
-          name="housingStatus"
           label={t('housingStatus')}
-          rules={[{ required: true, message: t('required') }]}
+          name="housingStatus"
+          rules={getFieldValidation('housingStatus', t)}
         >
-          <Select options={HOUSING_STATUS_VALUES.map((value) => ({ label: t(value), value }))} />
+          <Select
+            placeholder={getFieldPlaceholder('housingStatus', t)}
+            options={HOUSING_STATUS_VALUES.map((value) => ({ label: t(value), value }))}
+          />
         </Form.Item>
       </Col>
     </Row>
   );
 }
+
+export default memo(FamilyFinancialStep);

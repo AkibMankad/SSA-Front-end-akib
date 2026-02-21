@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import { Button, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 
-export default function LanguageSwitcher() {
+function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
 
   return (
@@ -26,3 +27,5 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
+
+export default memo(LanguageSwitcher);
