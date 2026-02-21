@@ -3,7 +3,7 @@ import { createContext, useContext, useMemo, useState } from 'react';
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
-  const [appName] = useState('3-Step Application Form Wizard');
+  const [appName] = useState('Social Support Application with AI Assistance');
 
   const value = useMemo(
     () => ({
