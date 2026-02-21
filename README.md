@@ -38,9 +38,6 @@ npm run dev
 
 Create a `.env` file in the root directory:
 
-```bash
-cp .env.example .env
-```
 Edit `.env` and add your OpenAI API key:
 
 ```
