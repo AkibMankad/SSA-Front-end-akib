@@ -1,3 +1,9 @@
+/**
+ * Get validation rules for Ant Design Form fields
+ * @param {string} fieldName - The form field name
+ * @param {Function} t - i18next translation function
+ * @returns {Array} Array of validation rules for the field
+ */
 export function getFieldValidation(fieldName, t) {
   const rules = {
     // Personal Information
@@ -75,6 +81,12 @@ export function getFieldValidation(fieldName, t) {
   return rules[fieldName] || [{ required: true, message: t('required') }];
 }
 
+/**
+ * Get placeholder text for form fields
+ * @param {string} fieldName - The form field name
+ * @param {Function} t - i18next translation function
+ * @returns {string} Translated placeholder text
+ */
 export function getFieldPlaceholder(fieldName, t) {
   return t(`${fieldName}Placeholder`) || '';
 }

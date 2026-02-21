@@ -7,12 +7,13 @@ Social Support Application with AI-Powered Assistance - A multi-step application
 - **Multi-Step Wizard**: 3-step application form with progress tracking
 - **AI Writing Assistant**: "Help Me Write" feature powered by OpenAI GPT-3.5 for Step 3 text fields
 - **Language-Aware AI**: AI generates text in user's selected language (English/Arabic) with proper RTL support
-- **Advanced Form Validation**: React Hook Form with custom field-specific error messages
-  - Phone number validation with international format support
+- **Form Validation**: Ant Design Form with custom field-specific error messages
+  - Phone number validation (10 digits, starting with 6-9)
   - Email address pattern validation
   - National ID validation (10-20 digits)
   - Text length constraints with min/max validation
   - Number inputs restricted to numeric values only
+  - Date format: DD/MM/YYYY
   - All fields include helpful placeholders
 - **Bilingual Support**: Full English and Arabic language support with RTL
 - **Form Persistence**: Auto-save form progress to localStorage
@@ -33,9 +34,7 @@ npm install
 npm run dev
 ```
 
-**Note**: The app works immediately with **mock AI responses** for testing. No API key needed!
-
-3. (Optional) Configure real OpenAI API for production:
+3. Configure real OpenAI API for production:
 
 Create a `.env` file in the root directory:
 
@@ -60,22 +59,20 @@ Get your API key from: https://platform.openai.com/api-keys
 ## Included stack
 
 - React 19.2.4 with Vite 7.3.1
-- React Hook Form 7.x for form validation and management
 - Ant Design 6.3.0 + Less 4.5.1
-- react-i18next 25.8.11 for internationalization
+- react-i18next 16.5.4 for internationalization
 - OpenAI API integration for AI-powered text generation
 - dayjs 1.11.19 for date handling
 - React Testing Library + Vitest for testing
 
 ## Architecture Highlights
 
-- **React Hook Form**: Powerful form validation with custom field-specific error messages and placeholders
-- **Smart Validation**: Field-level validation with pattern matching, min/max length, and custom rules
+- **Ant Design Form**: Native form validation with rules-based approach
+- **Smart Validation**: Field-level validation with pattern matching, min/max length, and type checking
 - **Custom Hooks**: Separation of concerns with dedicated hooks for form persistence, submission, and AI suggestions
 - **Performance Optimized**: All components use React.memo to prevent unnecessary re-renders
 - **Modern Patterns**: useCallback and useMemo for optimal performance
 - **Modular Structure**: Feature-based organization with clear separation between components, hooks, services, and utilities
-- **Type Safety**: JSDoc documentation for better code intelligence
 
 ## Project Structure
 

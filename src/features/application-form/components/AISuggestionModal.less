@@ -1,3 +1,5 @@
+@import '@styles/variables.less';
+
 .ai-modal {
   &-loading {
     text-align: center;
@@ -6,7 +8,7 @@
 
   &-loading-text {
     margin-top: 16px;
-    color: #666;
+    color: @color-gray-medium;
   }
 
   &-error {
@@ -28,17 +30,17 @@
   }
 
   &-accept-btn {
-    background-color: #52c41a;
-    border-color: #52c41a;
+    background-color: @color-success;
+    border-color: @color-success;
 
     &:hover {
-      background-color: #73d13d;
-      border-color: #73d13d;
+      background-color: @color-success-hover;
+      border-color: @color-success-hover;
     }
 
     &:active {
-      background-color: #389e0d;
-      border-color: #389e0d;
+      background-color: @color-success-active;
+      border-color: @color-success-active;
     }
   }
 }

@@ -58,9 +58,8 @@ export default function ApplicationFormWizard() {
           <Alert
             showIcon
             type={feedback.type}
-            message={feedback.message}
+            title={feedback.message}
             closable
-            onClose={() => setFeedback(null)}
           />
         </div>
       )}

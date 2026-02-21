@@ -17,9 +17,6 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/AkibMankad/SSA-Front-end-akib/issues"
-  },
   "homepage": "https://github.com/AkibMankad/SSA-Front-end-akib#readme",
   "dependencies": {
     "antd": "^6.3.0",

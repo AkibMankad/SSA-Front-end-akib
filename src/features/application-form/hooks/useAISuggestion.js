@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { generateAISuggestion } from '../services/openaiService';
 import { saveFormProgress } from '../utils/formStorage';
 
+/**
+ * Custom hook for AI suggestion feature
+ * @param {Function} t - i18next translation function
+ * @param {number} currentStep - Current step index (default: 2)
+ * @returns {Object} AI suggestion state and handlers
+ */
 export function useAISuggestion(t, currentStep = 2) {
   const { i18n } = useTranslation();
   const form = Form.useFormInstance();
