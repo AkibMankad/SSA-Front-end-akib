@@ -4,8 +4,8 @@ Social Support Application with AI-Powered Assistance - A multi-step application
 
 ## Features
 
-- **Multi-Step Wizard**: 3-step application form with progress tracking
-- **AI Writing Assistant**: "Help Me Write" feature powered by OpenAI GPT-3.5 for Step 3 text fields
+- **Multi-Step Wizard**: 3-step application form with progress bar
+- **AI Writing Assistant**: "Help Me Write" feature powered by OpenAI GPT-3.5-turbo for Step 3 textarea fields
 - **Language-Aware AI**: AI generates text in user's selected language (English/Arabic) with proper RTL support
 - **Form Validation**: Ant Design Form with custom field-specific error messages
   - Phone number validation (10 digits, starting with 6-9)
@@ -17,7 +17,7 @@ Social Support Application with AI-Powered Assistance - A multi-step application
   - All fields include helpful placeholders
 - **Bilingual Support**: Full English and Arabic language support with RTL
 - **Form Persistence**: Auto-save form progress to localStorage
-- **Responsive Design**: Mobile-friendly layout with Ant Design components
+- **Responsive Design**: Mobile, tablet, desktop friendly layout with Ant Design components
 - **Accessibility**: ARIA labels and keyboard navigation
 
 ## Setup
@@ -69,7 +69,7 @@ Get your API key from: https://platform.openai.com/api-keys
 - **Custom Hooks**: Separation of concerns with dedicated hooks for form persistence, submission, and AI suggestions
 - **Performance Optimized**: All components use React.memo to prevent unnecessary re-renders
 - **Modern Patterns**: useCallback and useMemo for optimal performance
-- **Modular Structure**: Feature-based organization with clear separation between components, hooks, services, and utilities
+- **Modular Structure**: Feature-based folder structure with clear separation between components, hooks, services, and utilities
 
 ## Project Structure
 
@@ -111,7 +111,7 @@ src/
 
 The application includes an AI-powered "Help Me Write" feature for Step 3 textarea fields:
 
-- **Current Financial Situation**: AI generates professional descriptions of financial circumstances
+- **Current Financial Situation**: AI generates descriptions of financial circumstances
 - **Employment Circumstances**: AI helps articulate employment status and challenges
 - **Reason for Applying**: AI assists in explaining why support is needed
 
@@ -120,7 +120,6 @@ The AI automatically detects the user's language preference and generates text a
 
 - **English Mode**: Generates natural, first-person English text
 - **Arabic Mode**: Generates native Arabic text with proper RTL (right-to-left) formatting
-- **Context-Aware**: Uses language-specific system prompts to ensure culturally appropriate responses
 - **Natural Output**: ~100 words, 3-4 sentences in conversational first-person tone
 
 ### How It Works
@@ -130,9 +129,9 @@ Each field has a "Help Me Write" button that:
 3. Generates context-aware, personalized suggestions in the selected language
 4. Shows suggestions in an editable modal with proper RTL support for Arabic
 5. Allows users to Accept, Edit, or Discard suggestions
-6. Saves accepted text to form with automatic localStorage persistence
+6. Save accepted text to form with automatic localStorage persistence
 
-To enable real AI generation, add your OpenAI API key to the `.env` file. The app works with mock responses by default for testing without an API key.
+To enable real AI generation, add your OpenAI API key to the `.env` file.
 
 ## Environment Variables
 
